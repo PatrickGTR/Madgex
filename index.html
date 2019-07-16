@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>PxlPro</title>
+  </head>
+
+  <body>
+    <nav class="nav nav--background nav--small">
+      <ul class="nav__links">
+        <li class="nav__item"><a href="#">Visit PxlPro.com</a></li>
+
+        <li class="nav__item nav__item--right"><a href="#">Sign up</a></li>
+        <li class="nav__item"><a href="#">Login</a></li>
+      </ul>
+    </nav>
+
+    <nav class="nav nav--main">
+      <ul class="nav__links">
+        <li>
+          <a href="#">
+            <img class="nav__logo" src="_assets/logo.png" alt="logo" />
+          </a>
+        </li>
+        <li class="nav__item nav__item--main nav__item--right">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav__item nav__item--main">
+          <a href="#find_job">Find a job</a>
+        </li>
+        <li class="nav__item nav__item--main">
+          <a href="#career_advice">Careers advice</a>
+        </li>
+        <li class="nav__item nav__item--main">
+          <a href="#">Job alerts</a>
+        </li>
+        <li class="nav__item nav__item--main"><a href="#">Your jobs</a></li>
+        <li class="nav__item nav__item--main nav__advertise">
+          <a href="#advertise_job">Advertise a job</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="hero hero--image--main">
+      <h1 class="hero__title">Search 1,570 Jobs</h1>
+      <h3 class="hero__subtitle">
+        Hundres of new career oppurtunities each day. Find your perfect job.
+      </h3>
+
+      <div class="hero__searchjob">
+        <form>
+          <input
+            id="position"
+            class="input input--long"
+            type="text"
+            placeholder="Keyword (e.g Manager)"
+            required
+          />
+          <input
+            id="location"
+            class="input input--long"
+            type="text"
+            placeholder="Location (e.g Boston)"
+            required
+          />
+          <select class="select select--medium">
+            <option>Within 10 miles</option>
+            <option>Within 20 miles</option>
+            <option>Within 30 miles</option>
+            <option>Within 40 miles</option>
+            <option>Within 50 miles</option>
+          </select>
+          <button
+            class="button button--red button--medium"
+            id="button_jobsearch"
+          >
+            Search
+          </button>
+        </form>
+      </div>
+
+      <script>
+        $("#button_jobsearch").on("click", () => {
+          const position = $("#position");
+          const location = $("#location");
+
+          if (position.val().trim() == "") {
+            position.css("border", "2px solid #f44336");
+          }
+          if (location.val().trim() == "") {
+            location.css("border", "2px solid #f44336");
+          }
+        });
+      </script>
+    </section>
+
+    <section class="jobs" id="find_job">
+      <div class="container">
+        <div class="columns">
+          <div class="column column--grow2">
+            <div class="column__header">
+              <h1 class="column__title">Browse jobs by sector</h1>
+
+              <h5 class="column__subtitle"><a href="#">View All »</a></h5>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <ul class="job">
+                  <li>
+                    <a href="#">Accountancy & Finance</a
+                    ><span class="job__count">41</span>
+                  </li>
+                  <li>
+                    <a href="#">Architecture, Building & Planning</a
+                    ><span class="job__count">71</span>
+                  </li>
+                  <li>
+                    <a href="#">Art & Design</a
+                    ><span class="job__count">59</span>
+                  </li>
+                  <li>
+                    <a href="#">Building & Construction</a
+                    ><span class="job__count">49</span>
+                  </li>
+                  <li>
+                    <a href="#">Business Management</a
+                    ><span class="job__count">247</span>
+                  </li>
+                  <li>
+                    <a href="#">Catering & Hospitality</a
+                    ><span class="job__count">14</span>
+                  </li>
+                  <li>
+                    <a href="#">Computers & IT</a
+                    ><span class="job__count">55</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <div class="column__header"></div>
+                <ul class="job">
+                  <li>
+                    <a href="#">Education</a><span class="job__count">193</span>
+                  </li>
+                  <li>
+                    <a href="#">Engineering</a
+                    ><span class="job__count">47</span>
+                  </li>
+                  <li>
+                    <a href="#">Media & Journalism</a
+                    ><span class="job__count">123</span>
+                  </li>
+                  <li>
+                    <a href="#">Retail & Wholesale</a
+                    ><span class="job__count">100</span>
+                  </li>
+                  <li>
+                    <a href="#">Sales</a><span class="job__count">29</span>
+                  </li>
+                  <li>
+                    <a href="#">Sciences</a><span class="job__count">79</span>
+                  </li>
+                  <li>
+                    <a href="#">Sports & Fitness</a
+                    ><span class="job__count">72</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="column__header">
+              <h1 class="column__title">Featured Jobs</h1>
+              <h5 class="column__subtitle"><a href="#">View all jobs »</a></h5>
+            </div>
+            <ul class="job">
+              <li>
+                <img class="jobs__image" src="_assets/_jobs/microsoft.png" />
+                <div class="job__info">
+                  <p class="job__title">
+                    Business Systems Anaylst
+                  </p>
+                  <p>New York City</p>
+                  <p>$30,000 - $40,000</p>
+                </div>
+              </li>
+              <li>
+                <img class="jobs__image" src="_assets/_jobs/amex.png" />
+
+                <div class="job__info">
+                  <p class="job__title">
+                    Paraegal Positions
+                  </p>
+                  <p>Newton, MA</p>
+                  <p>Competitive Salary</p>
+                </div>
+              </li>
+              <li>
+                <img class="jobs__image" src="_assets/_jobs/nasa.png" />
+                <div class="job__info">
+                  <p class="job__title">
+                    Operations Director
+                  </p>
+                  <p>Cape Sanaveral, FL</p>
+                  <p>Up to $100,00</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero hero--image--sub">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="cta">
+              <img src="_assets/_ctas/icon_email.svg" />
+              <p class="cta__title">
+                Get instant job alerts.
+              </p>
+              <p class="cta__subtitle">
+                Personalised job recommendations sent straight to your email.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="cta">
+              <img src="_assets/_ctas/icon_profile.svg" />
+              <p class="cta__title">
+                Create an account for free.
+              </p>
+              <p class="class_subtitle">
+                Shortlist jobs, manage your job alerts and receive special
+                offers.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="cta">
+              <img src="_assets/_ctas/icon_upload.svg" />
+
+              <p class="cta__title">
+                Upload your resume.
+              </p>
+              <p class="cta_subtitle">
+                Upload your resume so our employers can match your details to
+                the best jobs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="employers">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="column__header">
+              <h1 class="column__title">
+                Featured Employers
+              </h1>
+              <h5 class="column__subtitle">
+                <a href="#">View all employers</a>
+              </h5>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <img
+                  class="employers__image"
+                  src="_assets/_employers/citi.png"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="employers__image"
+                  src="_assets/_employers/agstar.png"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="employers__image"
+                  src="_assets/_employers/ford.png"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="employers__image"
+                  src="_assets/_employers/ioxus.png"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="employers__image"
+                  src="_assets/_employers/nike.png"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="employers__image"
+                  src="_assets/_employers/oracle.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="articles" id="career_advice">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <div class="mpu">
+              <img src="_assets/mpu.png" />
+            </div>
+          </div>
+
+          <div class="column column--grow2">
+            <div class="column__header">
+              <h1 class="column__title">
+                Careers Advices
+              </h1>
+              <h5 class="column__subtitle">
+                <a href="#">View all articles >></a>
+              </h5>
+            </div>
+
+            <div class="article">
+              <img src="_assets/_careers-advice/article1.png" />
+              <div class="article__info">
+                <a href="#">
+                  <h1 class="article__title">
+                    An introduction into ecommerce and the mobile revolution.
+                  </h1>
+                </a>
+                <p class="article__body">
+                  There are many ways to market productor a service and
+                  providing the potential clients and customers with
+                  testimonials is one of the best.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column">
+            <div class="advertisement">
+              <div class="advertisement__info" id="advertise_job">
+                <h1>Advertise with us</h1>
+                <ul>
+                  <li>
+                    Post jobs and monitor your applications
+                  </li>
+                  <li>
+                    Search our extensive candidate database
+                  </li>
+                  <li>
+                    Filter applications with screening questions
+                  </li>
+                </ul>
+                <button class="button button--red">Post a job</button>
+              </div>
+            </div>
+          </div>
+          <div class="column column--grow2">
+            <div class="columns">
+              <div class="column">
+                <div class="article__small">
+                  <img
+                    class="article__image"
+                    src="_assets/_careers-advice/article2.png"
+                  />
+                  <h3 class="article__body">
+                    <a href="#">
+                      Take pros and cons of taking a digital detox in the modern
+                      age
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <div class="column">
+                <div class="article__small">
+                  <img
+                    class="article__image"
+                    src="_assets/_careers-advice/article3.png"
+                  />
+                  <h3 class="article__body">
+                    <a href="#">
+                      Why should your company value user experience research?
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <div class="column">
+                <div class="article__small">
+                  <img
+                    class="article__image"
+                    src="_assets/_careers-advice/article4.png"
+                  />
+                  <h3 class="article__body">
+                    <a href="#">
+                      We're in the age of big data. But it's what you do it with
+                      that matters.
+                    </a>
+                  </h3>
+                </div>
+              </div>
+              <div class="column">
+                <div class="article__small">
+                  <img
+                    class="article__image"
+                    src="_assets/_careers-advice/article5.png"
+                  />
+                  <h3 class="article__body">
+                    <a href="#">
+                      Industry focus: A look inside Invision's studio in
+                      California.
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="information">
+      <div class="container">
+        <div class="columns">
+          <div class="column information__aboutus">
+            <h1 class="information__title">About us</h1>
+            <p class="information__content">
+              Diffrentiate and you stand out in a crowded marketplace. Present
+              your uniqueness and emphasize your rare attributes in your sales
+              copy and promotions and you'll capture the imagination and
+              interest of those you want to reach. In a world of copycapts, it
+              pays to be an original. It usually the creator of a new concept
+              who gets the most.
+            </p>
+          </div>
+          <div class="column information__app">
+            <h1 class="information__title">Download our new app</h1>
+            <p class="information__content information__content--app ">
+              Easily manage your job search on the go with our iPhone app.
+              Instant job notifications. Search shortlist and apply.
+            </p>
+            <a href="#">
+              <img class="information__appstore" src="_assets/appstore.png" />
+            </a>
+          </div>
+
+          <div class="column information_campaigns">
+            <h1 class="information__title">Featured campaigns</h1>
+
+            <div class="information__content">
+              <ul>
+                <li><a href="#">Jobs in the United Stats</a></li>
+                <li><a href="#">Management jobs in New York</a></li>
+                <li><a href="#">Graduate jobs</a></li>
+                <li><a href="#">Engineering jobs in Chicago</a></li>
+                <li><a href="#">Jobs in California</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="nav nav--bottom-background" style="padding: 40px 0 40px 0;">
+      <ul class="nav__links">
+        <li class="nav__item"><a href="#">Browse jobs</a></li>
+        <li class="nav__item"><a href="#">Search Employers</a></li>
+        <li class="nav__item"><a href="#">Terms & Conditions</a></li>
+        <li class="nav__item"><a href="#">Privacy</a></li>
+        <li class="nav__item"><a href="#">About us</a></li>
+        <li class="nav__item"><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+    <footer class="footer nav--bottom-background">
+      <ul class="footer__items">
+        <li class="footer__company">&copy 2016. Powered by Magdex</li>
+        <li class="footer__item footer--socialmedia">
+          <a href="www.facebook.com">
+            <img class="footer__icons" src="_assets/_social/Facebook.svg" />
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="https://twitter.com/">
+            <img class="footer__icons" src="_assets/_social/Twitter.svg" />
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="https://aboutme.google.com/">
+            <img class="footer__icons" src="_assets/_social/GooglePlus.svg" />
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="https://www.linkedin.com">
+            <img class="footer__icons" src="_assets/_social/LinkedIn.svg" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

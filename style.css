@@ -1,0 +1,512 @@
+
+  * {
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav {
+    padding: 10px 0 10px 0;
+    display: flex;
+  }
+
+  .nav--bottom-background {
+    background: rgb(54, 53, 53);
+  }
+
+  .nav--background {
+    background: #008CBA
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    list-style: none;
+  }
+
+  .nav__links > li {
+    margin-right: 20px;
+  }
+
+  .nav__item--right {
+    margin-left: auto;
+  }
+
+  .nav__item a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav--main {
+    margin: 20px 0 10px 0;
+  }
+
+  .nav__item--main a {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+  }
+
+  .nav__logo {
+    width: 200px;
+  }
+
+  .nav--small .nav__item a:hover {
+      background: white;
+      color: black;
+  }
+
+  .nav__item a:hover {
+    box-shadow: 5px 5px black;
+  }
+
+  .nav__item a:hover,
+  .nav__advertise {
+    text-decoration: none;
+    background: #008CBA;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .nav__advertise a {
+    font-weight: normal;
+    color: white;
+  }
+
+  .hero {
+    text-align: center;
+    color: white;
+  }
+    .hero--image--main {
+      padding-top: 200px;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("_assets/hero.png");
+      min-height: 500px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .hero--image--sub {
+      padding: 50px;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("_assets/_ctas/cta-bg.png");
+      min-height: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .hero__title {
+      font-size: 30px;
+    }
+    .hero__subtitle {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+    .hero__searchjob {
+      margin-top: 160px;
+      padding: 30px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+  .jobs {
+      padding-top: 40px;
+      width: 100%;
+      background-color: lightgray;
+      padding-bottom: 20px;
+  }
+    .jobs a:hover {
+      text-decoration: underline;
+    }
+    .jobs__image {
+      width: 130px;
+      background-color: white;
+      border: 1px solid black;
+      vertical-align: middle;
+    }
+
+
+  .job__title {
+    color: #008CBA;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+  .job__info {
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .job__count {
+    margin-left: 10px;
+    color: grey;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .job {
+    list-style: none;
+  }
+
+  .job > li {
+    margin-top: 20px;
+  }
+
+  .column__subtitle > a,
+  .job li > a {
+    text-decoration: none;
+    color: #008CBA
+  }
+
+  .columns {
+    display: flex;
+  }
+
+  .column--grow2 {
+    flex-grow: 2 !important;
+  }
+
+  .column--grow3 {
+    flex-grow: 3 !important;
+  }
+
+  .column {
+    flex: 1;
+    text-align: left
+  }
+
+  .column p {
+      margin: 3px;
+  }
+
+  .column__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .column__subtitle {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .cta {
+    background: rgba(27, 26, 26, 0.6);
+    padding: 50px 20px 50px 20px;
+    text-align: center;
+    margin: 10px;
+    height: 200px;
+  }
+  .cta__title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .cta__subtitle {
+    font-size: 15px;
+  }
+
+  .employers {
+    padding-top: 50px;
+  }
+
+  .employers__image {
+    width: 90%;
+    border: 1px solid black;
+    margin: 20px 0 50px 0;
+  }
+
+  .articles {
+    padding: 40px 0 40px 0;
+    background-color: lightgray;
+  }
+
+  .article {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article__title {
+    color: #008CBA;
+    font-weight: bold;
+  }
+
+  .article__body {
+    font-size: 18px;
+  }
+
+  .article__info {
+    margin-left: 30px;
+  }
+
+  .article__small {
+    width: 200px;
+  }
+
+  .article__image {
+    width: 200px;
+  }
+
+  .article__body a {
+    text-decoration: none;
+    color: #008CBA
+  }
+
+  .article .article__info > a {
+    text-decoration: none;
+  }
+
+  .mpu {
+    text-align: center;
+  }
+
+  .advertisement {
+    width: 90%;
+    background: url("_assets/advertise-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .advertisement__info {
+    padding: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .advertisement__info ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .advertisement__info  li {
+    margin-left: 1em;
+  }
+
+  .information {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+  }
+
+  .information_campaigns,
+  .information__aboutus {
+    padding: 20px;
+    background: lightgray;
+    margin-right: 50px;
+  }
+
+  .information__app {
+    padding: 20px;
+    background: lightblue;
+    margin-right: 50px;
+
+    background-image: url("_assets/mobile-app.png");
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+
+  .information__title {
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .information__content--app {
+      width: 240px;
+  }
+
+  .information__content {
+    line-height: 1.5;
+  }
+
+  .information__content ul {
+    margin-left: 1em;
+  }
+
+  .information__content li a {
+      text-decoration: none;
+      color: #008CBA
+  }
+
+  .information_campaigns a:hover {
+    text-decoration: underline;
+  }
+
+  .information__appstore {
+    margin-top: 10px;
+  }
+
+  .button,
+  .select,
+  .input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+
+  .input--long {
+    width: 20%;
+  }
+
+  .select--medium {
+    width: 250px;
+  }
+
+  .button--medium {
+    width: 250px;
+  }
+
+  .button {
+    color: white;
+  }
+
+  .button--red {
+    background-color: #f44336;
+  }
+
+  .button:hover {
+    background-color: #C40233;
+  }
+
+  .footer {
+      color: white;
+      padding: 10px 0 10px 0;
+      margin-top: 1px;
+  }
+
+  .footer__items {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    list-style: none;
+  }
+
+  .footer__item {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+
+  .footer--socialmedia {
+    margin-left: auto;
+  }
+
+
+  @media(max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+
+    .nav {
+        padding: 10px;
+    }
+
+    .nav--small .nav__links {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .nav__links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav__links li {
+        margin-bottom: 10px;
+    }
+
+    .nav__item a,
+    .nav__item--right,
+    .nav--main {
+        margin: 0;
+    }
+    .nav__logo {
+        display: none;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .job {
+        margin-bottom: 30px;
+    }
+
+    .job,
+    .article__info,
+    .column__header {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .employers .columns {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .employers__image {
+        width: 100%;
+        margin-bottom: 5px;
+        border: none;
+    }
+
+    .articles,
+    .article {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .article__title {
+        margin-top: 10px;
+    }
+
+    p.article__body {
+        margin: 10px 0 20px 0;
+
+    }
+    .article__small {
+        margin: auto;
+    }
+
+    .advertisement {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .information__aboutus,
+    .information__app,
+    .information_campaigns {
+        width: 100%;
+    }
+
+    .input,
+    .select,
+    .button {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+  }
